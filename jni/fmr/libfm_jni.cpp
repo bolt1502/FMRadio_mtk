@@ -51,7 +51,7 @@ jboolean powerUp(JNIEnv *env, jobject thiz, jfloat freq)
     int tmp_freq;
 
     LOGI("%s, [freq=%d]\n", __func__, (int)freq);
-    tmp_freq = (int)(freq * 10);        //Eg, 87.5 * 10 --> 875
+    tmp_freq = (int)(freq * 100);
     ret = FMR_pwr_up(g_idx, tmp_freq);
 
     LOGD("%s, [ret=%d]\n", __func__, ret);
